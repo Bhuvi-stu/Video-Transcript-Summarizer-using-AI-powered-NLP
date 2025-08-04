@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Summarizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>YouTube Video Summarizer</h1>
+            <p>Paste a YouTube video link to get a text summary</p>
+            <p class="note">Note: Videos with captions provide better summaries</p>
+        </header>
+        
+        <main>
+            <div class="input-section">
+                <input type="text" id="video-url" placeholder="Paste YouTube video URL here...">
+                <button id="summarize-btn">Summarize</button>
+            </div>
+            
+            <div class="language-options">
+                <label for="language-select">Summary Language:</label>
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी (Hindi)</option>
+                    <option value="ta">தமிழ் (Tamil)</option>
+                    <option value="te">తెలుగు (Telugu)</option>
+                    <option value="ml">മലയാളം (Malayalam)</option>
+                    <option value="kn">ಕನ್ನಡ (Kannada)</option>
+                    <option value="bn">বাংলা (Bengali)</option>
+                    <option value="mr">मराठी (Marathi)</option>
+                    <option value="gu">ગુજરાતી (Gujarati)</option>
+                    <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+                    <option value="or">ଓଡ଼ିଆ (Odia)</option>
+                </select>
+            </div>
+            
+            <div class="loader" id="loader">
+                <div class="spinner"></div>
+                <p>Generating summary...</p>
+            </div>
+            
+            <div class="results-section" id="results-section">
+                <div class="video-info">
+                    <div class="thumbnail-container">
+                        <img id="video-thumbnail" src="" alt="Video thumbnail">
+                    </div>
+                    <div class="video-details">
+                        <h2 id="video-title"></h2>
+                        <p id="video-channel"></p>
+                    </div>
+                </div>
+                
+                <div class="summary-container">
+                    <h3>Summary</h3>
+                    <div id="summary-text"></div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>This tool uses AI to generate summaries that resemble video content based on available information.</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
