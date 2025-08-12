@@ -1,4 +1,4 @@
-# YouTube Video Summarizer
+# Video Trancript Summarizer
 
 A web application that summarizes YouTube videos when you paste a video link.
 
